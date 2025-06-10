@@ -73,6 +73,15 @@ const App = () => {
     liveCanvasRef.current?.updateColor(color);
   };
 
+  const handleResetApp = () => {
+    setCanvasSize({ width: 800, height: 600 });
+    setElements([]);
+    setTextFontSize(20);
+    setElementColor("#000000");
+    liveCanvasRef.current?.updateFontSize(20);
+    liveCanvasRef.current?.updateColor("#000000");
+  };
+
   return (
     <div className="app-container">
       <SidebarPanel
@@ -84,6 +93,7 @@ const App = () => {
         onFontSizeChange={handleFontSizeChange}
         elementColor={elementColor}
         onColorChange={handleColorChange}
+        onLogoClick={handleResetApp} // 🔁 Reset logic on logo click
       />
       <div className="canvas-wrapper">
         <div className="canvas-inner">
