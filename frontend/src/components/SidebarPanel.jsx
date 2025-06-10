@@ -28,50 +28,66 @@ const SidebarPanel = ({
 
   return (
     <div className="sidebar">
-       <img src={logo} alt="Logo" className="sidebar-logo" />
+      <img src={logo} alt="Logo" className="sidebar-logo" />
 
-      <div className="group">
-        <input type="number" placeholder="Height" value={height} onChange={(e) => setHeight(e.target.value)} />
-        <input type="number" placeholder="Width" value={width} onChange={(e) => setWidth(e.target.value)} />
-        <button onClick={() => onCreate(height, width)}>Create Canvas</button>
-      </div>
+      <div className="scroll-content">
+        <div className="group">
+          <input
+            type="number"
+            placeholder="Height"
+            value={height}
+            onChange={(e) => setHeight(e.target.value)}
+          />
+          <input
+            type="number"
+            placeholder="Width"
+            value={width}
+            onChange={(e) => setWidth(e.target.value)}
+          />
+          <button onClick={() => onCreate(height, width)}>Create Canvas</button>
+        </div>
 
-      <div className="group">
-        <select value={type} onChange={(e) => setType(e.target.value)}>
-          <option value="rectangle">Rectangle</option>
-          <option value="circle">Circle</option>
-        </select>
-        <button onClick={() => onAdd(type)}>Add Element</button>
-      </div>
+        <div className="group">
+          <select value={type} onChange={(e) => setType(e.target.value)}>
+            <option value="rectangle">Rectangle</option>
+            <option value="circle">Circle</option>
+          </select>
+          <button onClick={() => onAdd(type)}>Add Element</button>
+        </div>
 
-      <div className="group">
-        <input
-          type="text"
-          placeholder="Type your text"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-        />
-        <input
-          type="number"
-          placeholder="Font Size"
-          value={textFontSize}
-          onChange={(e) => onFontSizeChange(parseInt(e.target.value))}
-        />
-        <button onClick={() => onAddText(text)}>Add Text</button>
-      </div>
+        <div className="group">
+          <input
+            type="text"
+            placeholder="Type your text"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+          />
+          <input
+            type="number"
+            placeholder="Font Size"
+            value={textFontSize}
+            onChange={(e) => onFontSizeChange(parseInt(e.target.value))}
+          />
+          <button onClick={() => onAddText(text)}>Add Text</button>
+        </div>
 
-      <div className="group">
-        <label className="upload-label">
-          <Upload size={16} />
-          Upload image
-          <input type="file" onChange={(e) => setFile(e.target.files[0])} />
-        </label>
-        <button onClick={() => file && onUploadImage(file)}>Add Image</button>
-      </div>
+        <div className="group">
+          <label className="upload-label">
+            <Upload size={16} />
+            Upload image
+            <input type="file" onChange={(e) => setFile(e.target.files[0])} />
+          </label>
+          <button onClick={() => file && onUploadImage(file)}>Add Image</button>
+        </div>
 
-      <div className="group">
-        <label>Change Color:</label>
-        <input type="color" value={selectedColor} onChange={handleColorChange} />
+        <div className="group">
+          <label>Change Color:</label>
+          <input
+            type="color"
+            value={selectedColor}
+            onChange={handleColorChange}
+          />
+        </div>
       </div>
 
       <button className="export-btn" onClick={onExport}>

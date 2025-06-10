@@ -5,7 +5,6 @@ const path = require("path");
 const router = express.Router();
 const canvasController = require("../controllers/canvasController");
 
-// Multer setup for file upload
 const storage = multer.diskStorage({
   destination: "uploads/",
   filename: (_, file, cb) => {
@@ -14,7 +13,6 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-// Routes
 router.post("/init", canvasController.initCanvas);
 router.post("/add", canvasController.addElement);
 router.get("/export", canvasController.exportPDF);
