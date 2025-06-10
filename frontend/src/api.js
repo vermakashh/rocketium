@@ -1,1 +1,1 @@
-export const apiBase = "http://localhost:5050/api/canvas";
+export const apiBase = process.env.REACT_APP_API_BASE;
