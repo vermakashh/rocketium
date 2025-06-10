@@ -9,9 +9,9 @@ const port = 5050;
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use("/uploads", express.static("uploads")); // serve uploaded images
+app.use("/uploads", express.static("uploads"));
 app.use("/api/canvas", canvasRoutes);
 
 app.listen(port, () => {
-  console.log(`Canvas Builder API running at http://localhost:${port}`);
+  console.log(`Server running at http://localhost:${port}`);
 });
