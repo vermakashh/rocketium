@@ -59,8 +59,12 @@ const App = () => {
   };
 
   const handleUploadImage = (file) => {
-    const url = URL.createObjectURL(file);
-    handleAddElement('image', url);
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      const base64 = reader.result;
+      handleAddElement('image', base64);
+    };
+    reader.readAsDataURL(file);
   };
 
   const handleFontSizeChange = (size) => {
@@ -71,6 +75,16 @@ const App = () => {
   const handleColorChange = (color) => {
     setElementColor(color);
     liveCanvasRef.current?.updateColor(color);
+  };
+
+  const handleExport = () => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const link = document.createElement("a");
+    link.download = "canvas-export.png";
+    link.href = canvas.toDataURL("image/png");
+    link.click();
   };
 
   const handleResetApp = () => {
@@ -89,11 +103,12 @@ const App = () => {
         onAdd={handleAddElement}
         onAddText={handleAddText}
         onUploadImage={handleUploadImage}
+        onExport={handleExport}
         textFontSize={textFontSize}
         onFontSizeChange={handleFontSizeChange}
         elementColor={elementColor}
         onColorChange={handleColorChange}
-        onLogoClick={handleResetApp} // 🔁 Reset logic on logo click
+        onLogoClick={handleResetApp}
       />
       <div className="canvas-wrapper">
         <div className="canvas-inner">
