@@ -40,7 +40,8 @@ rocketium/
 │   └── package.json
 │
 ├── .gitignore
-└── README.md  
+└── README.md 
+``` 
 
 ##  Tech Stack
 
