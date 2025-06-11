@@ -8,35 +8,39 @@ A full-stack web application that lets users create, customize, and export canva
 
 ## Project Structure
 
+```bash
 rocketium/
-├── backend/ 
-│ ├── controllers/
-│ ├── routes/
-│ ├── services/
-│ ├── server.js
-│ ├── package.json
 │
-├── frontend/ 
-│ ├── src/
-│ │ ├── components/
-│ │ | ├── assets/
-│ │ | |  ├── logo.png
-│ │ │ ├── LiveCanvas.jsx
-│ │ │ ├── SidebarPanel.jsx
-│ │ │ ├── ExportButton.jsx
-│ │ │ ├── CanvasInit.jsx
-│ │ │ └── ImageUploader.jsx
-│ │ ├── .env.local
-│ │ ├── .env.production
-│ │ ├── api.js
-│ │ ├── App.js
-│ │ ├── App.css
-│ │ ├── index.js
-│ │ ├── index.css
-│ ├── public/
-│ ├── package.json
-├── .gitignore   
-├── README.md   
+├── backend/
+│   ├── controllers/
+│   ├── routes/
+│   ├── services/
+│   ├── server.js
+│   ├── package.json
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── assets/
+│   │   │   │   ├── logo.png
+│   │   │   │   ├── screenshot.png
+│   │   │   ├── LiveCanvas.jsx
+│   │   │   ├── SidebarPanel.jsx
+│   │   │   ├── ExportButton.jsx
+│   │   │   ├── CanvasInit.jsx
+│   │   │   └── ImageUploader.jsx
+│   │   ├── .env.local
+│   │   ├── .env.production
+│   │   ├── api.js
+│   │   ├── App.js
+│   │   ├── App.css
+│   │   ├── index.js
+│   │   └── index.css
+│   ├── public/
+│   └── package.json
+│
+├── .gitignore
+└── README.md  
 
 ##  Tech Stack
 
@@ -65,7 +69,7 @@ rocketium/
   - Image upload
 - Pick and apply color
 - Drag & Resize elements
-- ⌨Delete elements via Backspace / Delete
+- Delete elements via Backspace / Delete
 - Reset everything by clicking the logo
 - Export canvas as **PDF using jsPDF**
 
@@ -84,13 +88,13 @@ Change Color:
 
 ## Preview
 
-[Canvas Web App Inferface](.frontend/src/components/assets/Interface.png)
+![Canvas Web App Interface](./frontend/src/components/assets/Interface.png)
 
 
 ## Author
 
-Akash Verma
-Electrical Engineering
-B.Tech, IIT Jammu
+Akash Verma  
+Electrical Engineering  
+B.Tech, IIT Jammu  
 2022UEE0120@iitjammu.ac.in
 
