@@ -4,7 +4,7 @@ A full-stack web application that lets users create, customize, and export canva
 
 ## Live Demo
 
-** [View Deployed App on Vercel](https://rocketium-git-main-akash-vermas-projects-c299e195.vercel.app/)**  
+**[View Deployed App on Vercel](https://rocketium-git-main-akash-vermas-projects-c299e195.vercel.app/)**  
 
 ## Project Structure
 
@@ -66,7 +66,7 @@ rocketium/
 - Add:
   - Rectangle
   - Circle
-  - Text (with size control)
+  - Text
   - Image upload
 - Pick and apply color
 - Drag & Resize elements
